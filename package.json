@@ -1,11 +1,12 @@
 {
-  "name": "sprint-9",
-  "version": "0.0.1",
+  "name": "news-explorer-frontend",
+  "version": "0.0.2",
   "description": "",
-  "main": "src/index.js",
+  "main": "src/scripts/script.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production rimraf dist && webpack --mode production",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --open --watch",
+    "deploy": "cross-env NODE_ENV=production gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -15,30 +16,30 @@
   "license": "ISC",
   "homepage": "https://github.com/aa-chernov/news-explorer-frontend#readme",
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
-    "core-js": "^3.4.1",
-    "jquery": "^3.5.1"
+    "babel-polyfill": "~6.26.0",
+    "core-js": "~3.6.5",
+    "path": "~0.12.7"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.0",
-    "@babel/core": "^7.10.0",
-    "@babel/preset-env": "^7.10.0",
-    "autoprefixer": "^9.8.0",
-    "babel-loader": "^8.1.0",
-    "cross-env": "^7.0.2",
-    "css-loader": "^3.5.3",
-    "cssnano": "^4.1.10",
-    "file-loader": "^6.0.0",
+    "@babel/cli": "~7.10.0",
+    "@babel/core": "~7.10.0",
+    "@babel/preset-env": "~7.10.0",
+    "autoprefixer": "~9.8.0",
+    "babel-loader": "~8.1.0",
+    "cross-env": "~7.0.2",
+    "css-loader": "~3.5.3",
+    "cssnano": "~4.1.10",
+    "file-loader": "~6.0.0",
     "gh-pages": "~2.0.1",
-    "html-webpack-plugin": "^4.3.0",
-    "image-webpack-loader": "^6.0.0",
-    "mini-css-extract-plugin": "^0.9.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.3",
-    "postcss-loader": "^3.0.0",
-    "style-loader": "^1.2.1",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0",
+    "html-webpack-plugin": "~4.3.0",
+    "image-webpack-loader": "~6.0.0",
+    "mini-css-extract-plugin": "~0.9.0",
+    "optimize-css-assets-webpack-plugin": "~5.0.3",
+    "postcss-loader": "~3.0.0",
+    "style-loader": "~1.2.1",
+    "webpack": "~4.43.0",
+    "webpack-cli": "~3.3.11",
+    "webpack-dev-server": "~3.11.0",
     "webpack-md5-hash": "0.0.6"
   }
 }
