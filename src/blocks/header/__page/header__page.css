@@ -1,0 +1,39 @@
+@import url('../__page/_active/header__page_active.css');
+
+.header__page {
+  display: inline-block;
+  color: #FFF;
+  text-decoration-line: none;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 16px 0 0;
+  padding: 0;
+}
+
+.header__page_dark {
+  color: #1A1B22;
+}
+
+.header__page_light {
+  color: #FFF;
+}
+
+@media (min-width: 768px) {
+  .header__page {
+    padding-top: calc((66px - 24px)/2);
+    padding-bottom: calc(((66px - 24px)/2) - 3px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__page {
+    margin: 0 34px 0 0;
+    font-size: 18px;
+    line-height: 24px;
+    padding-top: calc((80px - 24px)/2);
+    padding-bottom: calc(((80px - 24px)/2) - 3px);
+  }
+}
+

@@ -1,0 +1,19 @@
+@import url(../vendor/normalize.css);
+@import url(../vendor/fonts.css);
+@import url(../blocks/root/root.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/user-info/user-info.css);
+@import url(../blocks/button/button.css);
+@import url(../blocks/articles-list/articles-list.css);
+@import url(../blocks/article-card/article-card.css);
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/error-message/error-message.css);
+@import url(../blocks/search/search.css);
+@import url(../blocks/preloader/preloader.css);
+@import url(../blocks/notfound/notfound.css);
+@import url(../blocks/articles/articles.css);
+@import url(../blocks/footer/footer.css);
+
+body {
+  background-color: #FFF;
+}

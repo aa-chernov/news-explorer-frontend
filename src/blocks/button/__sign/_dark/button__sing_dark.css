@@ -1,0 +1,9 @@
+.button__sign_dark {
+  color: #1A1B22;
+  border: 1px solid #D1D2D6;
+}
+
+.button__sign_dark:hover {
+  transition: ease .3s;
+  border: 1px solid #1A1B22;
+}

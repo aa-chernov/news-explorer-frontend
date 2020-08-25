@@ -1,0 +1,26 @@
+.user-info__data {
+  max-width: 288px;
+  margin: 0;
+  padding: 24px 0 60px 0;
+}
+
+@media (min-width: 768px) {
+  .user-info__data {
+    max-width: 424px;
+    padding: 40px 0 72px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .user-info__data {
+    max-width: 600px;
+    padding: 131px 0 279px 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .user-info__data {
+    max-width: 600px;
+    padding: 131px 0 279px 0;
+  }
+}

@@ -1,0 +1,25 @@
+.footer__navigation-item {
+  width: 192px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer__navigation-item{
+    margin:  0 0 22px 0;
+    text-align: start;
+  }
+}
+
+@media (min-width : 768px) {
+  .footer__navigation-item{
+    width: 88px;
+    margin: 0;
+  }
+}
+
+

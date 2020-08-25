@@ -1,0 +1,28 @@
+@import url("./__item/footer__navigation-item.css");
+
+.footer__navigation{
+  width: 304px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: start;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .footer__navigation{
+    width: 200px;
+    height: 74px;
+    flex-direction: column;
+    text-align: start;
+  }
+}
+
+@media (min-width : 768px){
+  .footer__navigation{
+    width: 264px;
+    flex-direction: row;
+    height: 50px;
+  }
+}

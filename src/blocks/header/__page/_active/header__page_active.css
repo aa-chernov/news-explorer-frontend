@@ -1,0 +1,7 @@
+.header__page_active_light {
+  border-bottom: 3px solid #FFF;
+}
+
+.header__page_active_dark {
+  border-bottom: 3px solid #1A1B22;
+}

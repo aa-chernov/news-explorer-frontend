@@ -1,0 +1,26 @@
+.saved__title {
+  max-width: 288px;
+  margin: 0;
+  padding: 16px 0 0 0;
+  color: #1A1B22;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 34px; 
+}
+
+@media (min-width: 768px) {
+  .saved__title {
+    max-width: 336px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .saved__title {
+    max-width: 530px;
+    padding: 28px 0 0 0;
+    font-size: 40px;
+    line-height: 46px; 
+  }
+}
