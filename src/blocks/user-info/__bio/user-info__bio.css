@@ -9,6 +9,10 @@
   color: #1A1B22;
 }
 
+.user-info__bio:last-of-type {
+  padding: 24px 0 0 0;
+}
+
 @media (min-width: 768px) {
   .user-info__bio {
     padding: 16px 0 0 0;
