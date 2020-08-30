@@ -1,10 +1,15 @@
-@import url(./__content/popup__content.css);
-@import url(./__close/popup__close.css);
-@import url(./__title/popup__title.css);
-@import url(./__form/popup__form.css);
-@import url(./__input/popup__input.css);
-@import url(./__button/popup__button.css);
-@import url(./_is-opened/popup_is-opened.css);
+@import url('./__content/popup__content.css');
+@import url('./__close/popup__close.css');
+@import url('./__title/popup__title.css');
+@import url('./__form/popup__form.css');
+@import url('./__input/popup__input.css');
+@import url('./__button/popup__button.css');
+@import url('./_is-opened/popup_is-opened.css');
+@import url('./__error/popup__error.css');
+@import url('./__field/popup__field.css');
+@import url('./__fieldset/popup__fieldset.css');
+@import url('./__input-title/popup__input-title.css');
+@import url('./__advice/popup__advice.css');
 
 .popup {
   position: fixed;
@@ -16,5 +21,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  display: none;
+  z-index: 7;
+}
+
+@media (max-width: 767px) {
+  .popup {
+    background: none;
+  }
+}
+
+.popup:focus .header__menu {
   display: none;
 }

@@ -1,0 +1,23 @@
+.popup__advice-button {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #2F71E5;
+}
+
+.popup__advice-button_medium {
+  margin: 0;
+  padding: 14px 0 0 0;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+}

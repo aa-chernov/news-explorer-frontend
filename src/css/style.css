@@ -13,6 +13,7 @@
 @import url(../blocks/notfound/notfound.css);
 @import url(../blocks/articles/articles.css);
 @import url(../blocks/footer/footer.css);
+@import url(../blocks/menu/menu.css);
 
 body {
   background-color: #FFF;

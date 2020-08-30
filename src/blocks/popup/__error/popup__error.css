@@ -1,0 +1,21 @@
+.popup__error {
+  display: none;
+  position: absolute;
+  margin-top: 10px;
+  color: #df4b41;
+  text-align: left;
+  font-size: 14px;
+  animation: errors .1s ease-in-out;
+  z-index: 8;
+}
+
+.popup__error_global {
+  width: 358px;
+  margin: 0;
+  bottom: 139px;
+  align-self: center;
+  display: flex;
+  z-index: 8;
+  justify-content: center;
+  text-align: center;
+}
