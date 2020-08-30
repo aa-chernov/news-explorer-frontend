@@ -11,6 +11,7 @@
 @import url(../blocks/articles/articles.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/saved/saved.css);
+@import url(../blocks/menu/menu.css);
 
 body {
   background-color: #FFF;

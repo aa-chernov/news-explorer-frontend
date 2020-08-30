@@ -1,0 +1,46 @@
+.article-card__keyword {
+  display: flex;
+  position: absolute;
+  background-color: #FFF;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 10px;
+  width: auto;
+  height: 40px;
+  top: 16px;
+  left: 16px;
+  cursor: pointer;
+  margin: 0;
+  padding: 8px 12px;
+  outline: none;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  color: #000;
+  white-space: nowrap;
+  visibility: visible;
+  opacity: 1;
+}
+
+.article-card__delete:hover .article-card__keyword {
+  transition: visibility .3s, opacity .3s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .article-card__keyword {
+    top: 8px;
+    left: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .article-card__keyword {
+    top: 24px;
+    left: 24px;
+  }
+}

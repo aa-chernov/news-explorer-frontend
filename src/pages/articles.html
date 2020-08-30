@@ -13,7 +13,7 @@
     <header class="header">
       <div class="header__content">
         <h2 class="header__logo header__logo_dark">NewsExplorer</h2>
-        <img src="<%=require('../images/menu_dark.svg').default%>" alt="MENU" class="header__menu">
+        <img src="<%=require('../images/menu_dark.svg').default%>" alt="Меню" class="header__menu" id="open-menu">
         <div class="header__list">
           <nav class="header__navigation">
             <a href="./index.html" class="header__page header__page_dark">Главная</a>
@@ -21,7 +21,7 @@
           </nav>
           <button class="button button__sign button__sign_dark">
             Гретта&ensp;
-            <img src="<%=require('../images/logout_dark.svg').default%>" alt="&rArr;">
+            <img src="<%=require('../images/logout_dark.svg').default%>" alt="Выход&rArr;">
           </button>
         </div>
       </div>
@@ -36,81 +36,118 @@
     </section>
 
     <section class="preloader">
-      <img src="<%=require('../images/Ellipse.png').default%>" class="preloader__circle">
+      <img src="<%=require('../images/Ellipse.png').default%>" alt="Кружок загрузки..." class="preloader__circle">
       <p class="preloader__text">Идет загрузка новостей...</p>
     </section>
 
     <section class="notfound">
-      <img src="<%=require('../images/not-found_v1.png').default%>" class="notfound__image" alt="Ничего нет" />
+      <img src="<%=require('../images/not-found_v1.png').default%>" class="notfound__image" alt="Ничего не найдено" />
       <p class="notfound__title">У вас нет сохранённых статей</p>
       <p class="notfound__subtitle">Попробуйте найти новость по ключевому слову и добавить её в закладки.</p>
     </section>
 
     <section class="articles">
       <div id="articles-list" class="articles-list">
-          <div class="article-card">
-            <div id="card-img" class="article-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg)" data-url="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg">
-              <button class="article-card__delete-icon"></button>
-            </div>
-            <div class="article-card__description">
-              <p><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
-              <h3 class="article-card__name">Национальное достояние – парки</h3>
-              <p>В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв...</p>
-              <p>Лента.ру</p>
-            </div>
-          </div>
 
-          <div class="article-card">
-            <div id="card-img" class="article-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg)" data-url="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg">
-              <button class="article-card__delete-icon"></button>
-            </div>
-            <div class="article-card__description">
-              <p><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
-              <h3 class="article-card__name">Национальное достояние – парки</h3>
-              <p>В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв...</p>
-              <p>Лента.ру</p>
-            </div>
+        <div class="article-card">
+          <div class="article-card__image" style="background-image: url(https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80)" data-url="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80">
+            <button class="article-card__delete">
+              <span class="article-card__tooltip">Убрать из сохранённых</span>
+            </button>
+            <p class="article-card__keyword">Природа</p>
           </div>
-          
-          <div class="article-card">
-            <div id="card-img" class="article-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg)" data-url="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg">
-              <button class="article-card__delete-icon"></button>
-            </div>
-            <div class="article-card__description">
-              <p><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
-              <h3 class="article-card__name">Национальное достояние – парки</h3>
-              <p>В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв...</p>
-              <p>Лента.ру</p>
-            </div>
+          <div class="article-card__description">
+            <p class="article-card__date"><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
+            <h3 class="article-card__name">Национальное достояние – парки</h3>
+            <p class="article-card__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+            <p class="article-card__source">Лента.ру</p>
           </div>
+        </div>
 
-          <div class="article-card">
-            <div id="card-img" class="article-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg)" data-url="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg">
-              <button class="article-card__delete-icon"></button>
-            </div>
-            <div class="article-card__description">
-              <p><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
-              <h3 class="article-card__name">Национальное достояние – парки</h3>
-              <p>В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв...</p>
-              <p>Лента.ру</p>
-            </div>
+        <div class="article-card">
+          <div class="article-card__image" style="background-image: url(https://images.unsplash.com/photo-1477554193778-9562c28588c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)" data-url="https://images.unsplash.com/photo-1477554193778-9562c28588c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
+            <button class="article-card__delete">
+              <span class="article-card__tooltip">Убрать из сохранённых</span>
+            </button>
+            <p class="article-card__keyword">Природа</p>
           </div>
+          <div class="article-card__description">
+            <p class="article-card__date"><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
+            <h3 class="article-card__name">Национальное достояние – парки</h3>
+            <p class="article-card__paragraph">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного 
+              из местных чудес природы.</p>
+            <p class="article-card__source">Лента.ру</p>
+          </div>
+        </div>
 
-          <div class="article-card">
-            <div id="card-img" class="article-card__image" style="background-image: url(https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg)" data-url="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg">
-              <button class="article-card__delete-icon"></button>
-            </div>
-            <div class="article-card__description">
-              <p><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
-              <h3 class="article-card__name">Национальное достояние – парки</h3>
-              <p>В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складыв...</p>
-              <p>Лента.ру</p>
-            </div>
+        <div class="article-card">
+          <div class="article-card__image" style="background-image: url(https://images.unsplash.com/photo-1471086569966-db3eebc25a59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)" data-url="https://images.unsplash.com/photo-1471086569966-db3eebc25a59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+            <button class="article-card__delete">
+              <span class="article-card__tooltip">Убрать из сохранённых</span>
+            </button>
+            <p class="article-card__keyword">Тайга</p>
           </div>
+          <div class="article-card__description">
+            <p class="article-card__date"><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
+            <h3 class="article-card__name">Национальное достояние – парки</h3>
+            <p class="article-card__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+            <p class="article-card__source">Лента.ру</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card__image" style="background-image: url(https://images.unsplash.com/photo-1477554193778-9562c28588c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)" data-url="https://images.unsplash.com/photo-1477554193778-9562c28588c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
+            <button class="article-card__delete">
+              <span class="article-card__tooltip">Убрать из сохранённых</span>
+            </button>
+            <p class="article-card__keyword">Парки</p>
+          </div>
+          <div class="article-card__description">
+            <p class="article-card__date"><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
+            <h3 class="article-card__name">Национальное достояние – парки</h3>
+            <p class="article-card__paragraph">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного 
+              из местных чудес природы.</p>
+            <p class="article-card__source">Лента.ру</p>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div class="article-card__image" style="background-image: url(https://images.unsplash.com/photo-1471086569966-db3eebc25a59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)" data-url="https://images.unsplash.com/photo-1471086569966-db3eebc25a59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+            <button class="article-card__delete">
+              <span class="article-card__tooltip">Убрать из сохранённых</span>
+            </button>
+            <p class="article-card__keyword">Фотография</p>
+          </div>
+          <div class="article-card__description">
+            <p class="article-card__date"><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
+            <h3 class="article-card__name">Национальное достояние – парки</h3>
+            <p class="article-card__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+            <p class="article-card__source">Лента.ру</p>
+          </div>
+        </div>
 
       </div>
       <button class="button button__more">Показать еще</button>
     </section>
+
+    <div class="menu" id="menu">
+      <div class="menu__content">
+        <div class="menu__header">
+          <h2 class="menu__logo">NewsExplorer</h2>
+          <img class="menu__close" id="close-menu" src="../images/close.svg" alt="Закрыть">
+        </div>
+        <div class="menu__list">
+          <nav class="menu__navigation">
+            <a href="./index.html" class="menu__page">Главная</a>
+            <a href="./articles.html" class="menu__page menu__page_active">Сохранённые статьи</a>
+          </nav>
+          <button class="button button__sign button__sign_light button__wide">
+            Гретта&ensp;
+            <img src="<%=require('../images/logout_light.svg').default%>" alt="Выход&rArr;">
+          </button>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer">
       <p class="footer__copy">© 2020 Supersite,Powered by News API</p>
