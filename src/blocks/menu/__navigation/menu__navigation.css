@@ -1,0 +1,7 @@
+.menu__navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0 22px 0;
+  margin: 0;
+}

@@ -1,0 +1,30 @@
+.user-info__photo {
+  width: 272px;
+  height: 272px;
+}
+
+@media screen and (max-width: 768px) {
+  .user-info__photo {
+    width: 272px;
+    height: 272px;
+    margin: 0;
+    padding: 32px 0 0 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .user-info__photo {
+    width: 232px;
+    height: 232px;
+    align-self: center;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .user-info__photo {
+    width: 464px;
+    height: 464px;
+    padding: 80px 56px 80px 0;
+  }
+}

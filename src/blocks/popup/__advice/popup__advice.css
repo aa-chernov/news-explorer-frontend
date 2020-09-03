@@ -1,0 +1,15 @@
+@import url('../__advice-button/popup__advice-button.css');
+
+.popup__advice {
+  display: flex;
+  margin: 0;
+  padding: 16px 0 0 0;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  text-align: center;
+  justify-content: center;
+}

@@ -1,0 +1,19 @@
+.search__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 32px 0;
+}
+
+@media (min-width: 768px) {
+  .search__content {
+    padding: 0 0 48px 0;  
+  }
+}
+
+@media (min-width: 1024px) {
+  .search__content {
+    padding: 0 0 80px 0;
+  }
+}

@@ -1,0 +1,17 @@
+@import url('../articles/__header/articles__header.css');
+
+.articles {
+  margin: 0 16px 0;
+}
+
+@media (min-width: 768px) {
+  .articles {
+    margin: 0 40px 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .articles {
+    margin: 0 104px 0;
+  }
+}

@@ -1,0 +1,34 @@
+@import url('./__photo/user-info__photo.css');
+@import url('./__data/user-info__data.css');
+@import url('./__title/user-info__title.css');
+@import url('./__bio/user-info__bio.css');
+@import url('./__add-button/user-info__add-button.css');
+@import url('./__edit-button/user-info__edit-button.css');
+
+.user-info {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  color: #1A1B22;
+  padding: 0 16px;
+  background-color: #FFF;
+}
+
+@media screen and (max-width: 767px) {
+  .user-info {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .user-info {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .user-info {
+    padding: 0 104px;
+  }
+}

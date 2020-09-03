@@ -1,0 +1,55 @@
+@import url('../__tooltip/article-card__tooltip.css');
+
+.article-card__bookmark {
+  position: absolute;
+  background: url(../../../images/bookmark_normal.svg) center no-repeat;
+  background-color: #FFF;
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  display: none;
+  transition: ease .3s;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.article-card__bookmark:hover {
+  background: url(../../../images/bookmark_hover.svg) center no-repeat;
+  background-color: #FFF;
+  transition: ease .3s;
+}
+
+.article-card__bookmark:active {
+  background: url(../../../images/bookmark_marked.svg) center no-repeat;
+  background-color: #FFF;
+  transition: ease .3s;
+}
+
+.article-card:hover .article-card__bookmark {
+  display: block;
+}
+
+.article-card__bookmark:hover .article-card__tooltip {
+  transition: visibility .3s, opacity .3s ease;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .article-card__bookmark {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .article-card__bookmark {
+    top: 24px;
+    right: 24px;
+  }
+}

@@ -1,0 +1,10 @@
+.header__navigation {
+  display: none;
+  color: #000;
+}
+
+@media (min-width: 768px) {
+  .header__navigation {
+    display: flex;
+  }
+}

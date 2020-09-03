@@ -1,0 +1,23 @@
+.article-card__name {
+  margin: 0;
+  padding: 10px 0 0 0;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+}
+
+@media (min-width: 768px) {
+  .article-card__name {
+    line-height: 24px;
+    padding: 12px 0 0 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .article-card__name {
+    font-size: 26px;
+    line-height: 30px;
+  }
+}

@@ -1,0 +1,22 @@
+@import url('../saved/__content/saved__content.css');
+@import url('../saved/__title/saved__title.css');
+@import url('../saved/__subtitle/saved__subtitle.css');
+@import url('../saved/__section/saved__section.css');
+@import url('../saved/__accent/saved__accent.css');
+
+.saved {
+  padding-top: 57px;
+  background-color: #FFF;
+}
+
+@media (min-width: 768px) {
+  .saved {
+    padding-top: 67px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .saved {
+    padding-top: 81px;
+  }
+}

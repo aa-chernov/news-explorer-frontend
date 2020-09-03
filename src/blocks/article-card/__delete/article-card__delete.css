@@ -1,0 +1,55 @@
+@import url('../__tooltip/article-card__tooltip.css');
+@import url('../__keyword/article-card__keyword.css');
+
+.article-card__delete {
+  position: absolute;
+  background: url(../../../images/trash.svg) center no-repeat;
+  background-color: #FFF;
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  display: none;
+  transition: ease .3s;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+.article-card__delete:hover {
+  background: url(../../../images/trash_hover.svg) center no-repeat;
+  background-color: #FFF;
+}
+
+.article-card:hover .article-card__delete {
+  display: block;
+}
+
+.article-card__delete:hover .article-card__tooltip {
+  transition: visibility .3s, opacity .3s ease;
+  visibility: visible;
+  opacity: 1;
+}
+
+.article-card__delete:hover .article-card__keyword {
+  transition: visibility .3s, opacity .3s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media (min-width: 768px) {
+  .article-card__delete {
+    top: 8px;
+    right: 8px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .article-card__delete {
+    top: 24px;
+    right: 24px;
+  }
+}

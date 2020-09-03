@@ -1,0 +1,30 @@
+@import url('../__sign/_dark/button__sing_dark.css');
+@import url('../__sign/_light/button__sing_light.css');
+
+.button__sign {
+  display: flex;
+  height: 40px;
+  margin: 0;
+  padding: 0 15px 0;
+  background-color: transparent;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 100px;
+  z-index: 5;
+  transition: ease .3s;
+}
+
+.button__sign:active {
+  transition: ease .3s;
+  opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+  .button__sign {
+    height: 48px;
+    font-size: 18px;
+  }
+}

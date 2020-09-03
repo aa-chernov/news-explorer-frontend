@@ -1,0 +1,30 @@
+.button__form {
+  display: flex;
+  width: 288px;
+  height: 64px;
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  background-color: #2F71E5;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  transition: ease .3s;
+}
+
+.button__form:hover {
+  background-color: #347EFF;
+  transition: ease .3s;
+}
+
+.button__form:active {
+  background-color: #2A65CC;
+  transition: ease .3s;
+}
+
+@media (min-width: 768px) {
+  .button__form {
+    width: 360px;
+  }
+}
+

@@ -1,0 +1,39 @@
+@import url('../__error/popup__error.css');
+@import url('../__button/popup__button.css');
+
+.popup__input {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #000;
+  opacity: .2;
+  padding: 7px 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  outline: none;
+}
+
+.popup__input:focus {
+  opacity: 1;
+  border-color: #000;
+}
+
+.popup__input:active {
+  border-color: #000;
+  opacity: 1;
+}
+
+.popup__input:valid:not(:placeholder-shown) {
+  border-color: #2F71E5;
+  opacity: 1;
+}
+
+.popup__input:invalid:not(:placeholder-shown) {
+  border-color: #df4b41;
+  opacity: 1;
+}
+
+.popup__input:invalid:not(:placeholder-shown) + .popup__error {
+  display: block;
+  opacity: 1;
+}

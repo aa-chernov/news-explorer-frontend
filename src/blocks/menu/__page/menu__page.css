@@ -1,0 +1,17 @@
+.menu__page {
+  color: #FFF;
+  text-decoration-line: none;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 56px;
+  margin: 0 16px 0;
+  padding: 0 0 3px 0;
+}
+
+.menu__page_active {
+  padding: 0;
+  border-bottom: 3px solid #FFF;
+}
+

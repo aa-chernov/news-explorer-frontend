@@ -1,0 +1,31 @@
+.button__more {
+  display: flex;
+  width: 240px;
+  height: 56px;
+  margin: 32px auto 40px;
+  padding: 0;
+  color: #1A1B22;
+  background-color: #FFF;
+  border-radius: 80px;
+  border: none;
+  outline: none;
+  transition: ease .3s;
+}
+
+.button__more:hover {
+  opacity: .9;
+  transition: ease .3s;
+}
+
+.button__more:active {
+  box-shadow: 0 5px 15px rgba(14, 26, 57, 0.2);
+  transition: ease .3s;
+}
+
+@media (min-width: 768px) {
+  .button__more {
+    width: 288px;
+    height: 64px;
+    margin: 64px auto 80px;
+  }
+}

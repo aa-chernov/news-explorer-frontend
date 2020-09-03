@@ -1,0 +1,19 @@
+.saved__content {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 8px 16px 32px;
+  justify-self: start;
+}
+
+@media (min-width: 768px) {
+  .saved__content {
+    padding: 24px 40px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .saved__content {
+    padding: 40px 104px 56px;
+  }
+}

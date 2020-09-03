@@ -1,0 +1,9 @@
+.menu__content{
+  width: 100%;
+  height: 286px;
+  position: relative;
+  background: #1A1B22;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  box-sizing: border-box;
+}

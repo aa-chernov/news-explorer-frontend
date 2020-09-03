@@ -1,0 +1,21 @@
+.button__disable {
+  display: flex;
+  width: 288px;
+  height: 64px;
+  margin: 0;
+  padding: 0;
+  color: #B6BCBF;
+  background-color: #E6E8EB;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  transition: ease .3s;
+}
+
+@media (min-width: 768px) {
+  .button__disable {
+    width: 360px;
+  }
+}
+
+/*.button.button__disable*/

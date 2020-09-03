@@ -1,0 +1,40 @@
+.button__search {
+  display: flex;
+  width: 288px;
+  height: 64px;
+  margin: 0;
+  padding: 0;
+  color: #FFF;
+  background-color: #2F71E5;
+  border-radius: 100px;
+  border: none;
+  outline: none;
+  z-index: 5;
+  transition: ease .3s;
+  box-shadow: 0 5px 15px rgba(14, 26, 57, 0.2);
+}
+
+.button__search:hover {
+  background-color: #347EFF;
+  transition: ease .3s;
+}
+
+.button__search:active {
+  background-color: #2A65CC;
+  transition: ease .3s;
+}
+
+@media (min-width: 768px) {
+  .button__search {
+    width: 160px;
+    height: 56px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .button__search {
+    width: 168px;
+    height: 64px;
+  }
+}
+

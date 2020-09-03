@@ -1,0 +1,29 @@
+.search__title {
+  max-width: 288px;
+  margin: 0 auto;
+  padding: 86px 0 0 0;
+  color: #FFF;
+  font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px; 
+}
+
+@media (min-width: 768px) {
+  .search__title {
+    max-width: 405px;
+    padding: 104px 0 0 0;
+    font-size: 36px;
+    line-height: 40px;    
+  }
+}
+
+@media (min-width: 1024px) {
+  .search__title {
+    max-width: 608px;
+    padding: 160px 0 0 0;
+    font-size: 60px;
+    line-height: 64px; 
+  }
+}

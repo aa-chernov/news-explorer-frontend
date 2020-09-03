@@ -1,0 +1,9 @@
+.header__menu {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+.header__menu {
+  display: none;
+}
+}

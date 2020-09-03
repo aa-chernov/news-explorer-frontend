@@ -1,0 +1,9 @@
+.button__sign_light {
+  color: #FFF;
+  border: 1px solid #D1D2D6;
+}
+
+.button__sign_light:hover {
+  transition: ease .3s;
+  border: 1px solid #FFF;
+}

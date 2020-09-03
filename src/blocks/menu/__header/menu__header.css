@@ -1,0 +1,9 @@
+.menu__header {
+  height: 56px;
+  padding:  0 16px 0 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+  color: #FFF;
+}

@@ -1,0 +1,18 @@
+.notfound__image{
+  width: 76px;
+  height: 76px;
+}
+
+@media (min-width: 768px) {
+  .notfound__image {
+    width: 86px;
+    height: 86px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .notfound__image {
+    width: 96px;
+    height: 96px;
+  }
+}

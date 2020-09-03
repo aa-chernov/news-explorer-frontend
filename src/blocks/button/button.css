@@ -1,0 +1,19 @@
+@import url(./__disable/button__disable.css);
+@import url(./__fotm/button__form.css);
+@import url(./__more/battom__more.css);
+@import url(./__search/button__search.css);
+@import url(./__sign/button__sign.css);
+@import url(./__wide/button__wide.css);
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}

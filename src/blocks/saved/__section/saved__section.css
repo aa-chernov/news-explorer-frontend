@@ -1,0 +1,24 @@
+.saved__section {
+  max-width: 288px;
+  margin: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  color: rgba(26, 27, 34, 0.5);
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .saved__section {
+    max-width: 712px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .saved__section {
+    font-size: 18px;
+  }
+}
