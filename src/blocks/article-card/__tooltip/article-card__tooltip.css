@@ -25,4 +25,11 @@
   white-space: nowrap;
   visibility: hidden;
   opacity: 0;
+  z-index: 15;
+  box-shadow: 0 5px 15px rgba(14, 26, 57, 0.2);
+  transition: .3s ease;
+}
+
+.article-card__tooltip_disable {
+  display: none;
 }

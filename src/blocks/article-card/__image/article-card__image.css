@@ -8,11 +8,12 @@
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   min-height: 196px;
+  object-fit: cover;
 }
 
 @media (min-width: 768px) {
   .article-card__image {
-    min-height: 150px;
+    max-height: 150px;
   }
 }
 

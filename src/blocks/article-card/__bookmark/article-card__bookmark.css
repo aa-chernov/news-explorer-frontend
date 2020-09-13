@@ -18,17 +18,30 @@
   outline: none;
 }
 
+.article-card__bookmark_saved {
+  background: url(../../../images/bookmark_marked.svg) center no-repeat;
+  background-color: #FFF;
+  transition: ease .3s;
+}
+
+.article-card__bookmark.article-card__bookmark_saved:hover {
+  background: url(../../../images/bookmark_marked.svg) center no-repeat;
+  background-color: #FFF;
+}
+
 .article-card__bookmark:hover {
   background: url(../../../images/bookmark_hover.svg) center no-repeat;
   background-color: #FFF;
   transition: ease .3s;
 }
 
-.article-card__bookmark:active {
+
+/* .article-card__bookmark:active {
   background: url(../../../images/bookmark_marked.svg) center no-repeat;
   background-color: #FFF;
   transition: ease .3s;
-}
+} */
+
 
 .article-card:hover .article-card__bookmark {
   display: block;

@@ -13,6 +13,11 @@
   outline: none;
 }
 
+.popup__input_invalid {
+  border-color: #df4b41;
+  opacity: 1;
+}
+
 .popup__input:focus {
   opacity: 1;
   border-color: #000;

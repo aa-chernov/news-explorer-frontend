@@ -1,6 +1,6 @@
 {
   "name": "news-explorer-frontend",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "",
   "main": "src/scripts/script.js",
   "scripts": {
@@ -18,7 +18,8 @@
   "dependencies": {
     "babel-polyfill": "6.26.0",
     "core-js": "3.6.5",
-    "path": "0.12.7"
+    "path": "0.12.7",
+    "validator": "13.1.1"
   },
   "devDependencies": {
     "@babel/cli": "7.10.0",

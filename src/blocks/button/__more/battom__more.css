@@ -1,5 +1,5 @@
-.button__more {
-  display: flex;
+.button.button__more {
+  display: none;
   width: 240px;
   height: 56px;
   margin: 32px auto 40px;
@@ -11,6 +11,16 @@
   outline: none;
   transition: ease .3s;
 }
+
+
+.button.button__more_active {
+  display: flex;
+}
+
+
+/* .button.button__more_disable {
+  display: none;
+} */
 
 .button__more:hover {
   opacity: .9;

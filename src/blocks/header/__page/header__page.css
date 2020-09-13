@@ -1,7 +1,7 @@
 @import url('../__page/_active/header__page_active.css');
 
 .header__page {
-  display: inline-block;
+  display: none;
   color: #FFF;
   text-decoration-line: none;
   font-style: normal;
@@ -10,6 +10,10 @@
   line-height: 24px;
   margin: 0 16px 0 0;
   padding: 0;
+}
+
+.header__page_visible {
+  display: inline-block;
 }
 
 .header__page_dark {

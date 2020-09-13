@@ -22,6 +22,7 @@
 .article-card__delete:hover {
   background: url(../../../images/trash_hover.svg) center no-repeat;
   background-color: #FFF;
+  box-shadow: 0 5px 15px rgba(14, 26, 57, 0.2);
 }
 
 .article-card:hover .article-card__delete {
