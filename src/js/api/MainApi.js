@@ -6,7 +6,7 @@ export default class MainApi {
   signup(email, password, name) {
     return fetch(`${this.server}/signup`, {
       method: 'POST',
-      // mode: 'no-cors',
+      mode: 'no-cors',
       credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
@@ -30,6 +30,7 @@ export default class MainApi {
   signin(email, password) {
     return fetch(`${this.server}/signin`, {
       method: 'POST',
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
       },

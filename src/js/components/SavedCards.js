@@ -57,7 +57,7 @@ export default class SavedCards extends BaseComponent {
   }
 
   setTitle(array, userName) {
-    const keyNumber = this.getSortKeywords(array).length;
+    const keyNumber = array.length;
     if (keyNumber === 1) {
       this.title.textContent = `${userName}, у вас ${keyNumber} сохраненная статья`;
     } else if (keyNumber > 1 && keyNumber < 5) {
@@ -71,15 +71,25 @@ export default class SavedCards extends BaseComponent {
   }
 
   setSubtitle(array) {
-    const keyItem = this.getSortKeywords(array);
+    const keyItems = this.getSortKeywords(array);
     const otherKeys = this.getSortKeywords(array).length - 2;
     const firstKey = document.querySelector('#first-key');
-    firstKey.textContent = `${keyItem[0]}`;
+    firstKey.textContent = `${keyItems[0]}`;
     const secondKey = document.querySelector('#second-key')
-    secondKey.textContent = `${keyItem[1]}`;
+    secondKey.textContent = `${keyItems[1]}`;
+    if (keyItems.length === 1) {
+      firstKey.textContent = `${keyItems[0]}`;
+      secondKey.textContent = '';
+      otherKey.textContent = `всё`;
+    }
+    if (keyItems.length === 2) {
+      firstKey.textContent = `${keyItems[0]}`;
+      secondKey.textContent = '';
+      otherKey.textContent = `${keyItems[1]}`;
+    }
     if (otherKeys === 1) {
       const otherKey = document.querySelector('#other-keys');
-      otherKey.textContent = `${keyItem[2]}`;
+      otherKey.textContent = `${keyItems[2]}`;
     } else {
       const manyKeys = document.querySelector('#other-keys')
       manyKeys.textContent = `${otherKeys} другим`;

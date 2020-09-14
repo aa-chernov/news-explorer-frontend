@@ -12,13 +12,20 @@ import { serverUrl, newsApiUrl, newsApiKey } from '../js/constants/apiData';
 
 export const searchResults = document.querySelector('.search-results');
 
+export const mainApi = new MainApi(serverUrl);
+export const newsApi = new NewsApi(newsApiUrl, newsApiKey);
+
 export const signinForm = document.querySelector("#signin-form");
 export const signupForm = document.querySelector("#signup-form");
 export const searchForm = document.querySelector("#search-form");
 
 export const signinSubmit = document.querySelector('#signin-submit');
 export const signupSubmit = document.querySelector('#signup-submit');
+
 export const searchSubmit = document.querySelector('#search-submit');
+
+export const signinFormSample = new Form(signinForm, signinSubmit);
+export const signupFormSample = new Form(signupForm, signupSubmit);
 
 export const signinButton = document.querySelector("#button-signin");
 export const mobileSigninButton = document.querySelector("#menu-signin");
@@ -26,6 +33,10 @@ export const mobileSigninButton = document.querySelector("#menu-signin");
 export const signinPopup = document.querySelector('#signin-popup');
 export const signupPopup = document.querySelector('#signup-popup');
 export const successPopup = document.querySelector('#sign-popup');
+
+export const signinPopupSample = new Popup(signinPopup, signinFormSample);
+export const signupPopupSample = new Popup(signupPopup, signupFormSample);
+export const successPopupSample = new Popup(successPopup, signupFormSample);
 
 export const logoutButton = document.querySelector('#button-sign');
 export const mobileLogoutButton = document.querySelector('#menu-sign');
@@ -37,30 +48,17 @@ export const signinTransitButton = document.querySelector('#advice-signin');
 export const signupTransitButton = document.querySelector('#advice-signup');
 export const successTransitButton = document.querySelector('#advice-sign');
 
-export const notFoundSection = document.querySelector("#articles-not-found");
-export const preloader = document.querySelector("#preloader");
-export const articlesList = document.querySelector('#articles-list');
-export const showMoreButton = document.querySelector('#button-more');
-
-export const mainApi = new MainApi(serverUrl);
-export const newsApi = new NewsApi(newsApiUrl, newsApiKey);
-
 export const header = new Header(mainApi, openButton, closeButton);
-
-export const signinFormSample = new Form(signinForm, signinSubmit);
-export const signupFormSample = new Form(signupForm, signupSubmit);
-
-export const signinPopupSample = new Popup(signinPopup, signinFormSample);
-export const signupPopupSample = new Popup(signupPopup, signupFormSample);
-export const successPopupSample = new Popup(successPopup, signupFormSample);
-
-const search = new Search(newsCardList, notFoundSection, preloader, searchForm, newsApi);
 
 const newArticle = (mainApi) => new NewsCard(mainApi);
 export const newsCardSample = new NewsCard(mainApi);
-
+export const articlesList = document.querySelector('#articles-list');
+export const showMoreButton = document.querySelector('#button-more');
 export const newsCardList = new NewsCardList(articlesList, showMoreButton, newArticle, mainApi)
 
+export const notFoundSection = document.querySelector("#articles-not-found");
+export const preloader = document.querySelector("#preloader");
+const search = new Search(newsCardList, notFoundSection, preloader, searchForm, newsApi);
 
 signinButton.addEventListener("click", () => signinPopupSample.open());
 mobileSigninButton.addEventListener("click", () => signinPopupSample.open());

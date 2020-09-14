@@ -6,7 +6,6 @@ export default class NewsApi {
 
   getNews(query, from, to, size) {
     const params = `q=${query}&from=${from}&to=${to}&pageSize=${size}&apiKey=${this.key}`;
-    // return fetch(`${this.url}/everything?${params}`, {mode: 'no-cors'})
     return fetch(`${this.url}/everything?${params}`)
       .then((res) => {
         if (res.ok) {
