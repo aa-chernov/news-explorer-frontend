@@ -2,7 +2,7 @@
 @import url('../__sign/_light/button__sing_light.css');
 
 .button__sign {
-  display: flex;
+  display: none;
   height: 40px;
   margin: 0;
   padding: 0 15px 0;
@@ -15,6 +15,14 @@
   border-radius: 100px;
   z-index: 5;
   transition: ease .3s;
+}
+
+.button.button__sign_disable {
+  display: none;
+}
+
+.button.button__sign_active {
+  display: flex;
 }
 
 .button__sign:active {

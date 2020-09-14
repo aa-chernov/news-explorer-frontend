@@ -1,12 +1,19 @@
 @import url('../articles/__header/articles__header.css');
 
 .articles {
+  display: none;
   margin: 0 16px 0;
+  padding-bottom: 16px;
+}
+
+.articles_active {
+  display: block;
 }
 
 @media (min-width: 768px) {
   .articles {
     margin: 0 40px 0;
+    padding-bottom: 40px;
   }
 }
 

@@ -14,14 +14,15 @@
       <div class="header__content">
         <h2 class="header__logo header__logo_dark">NewsExplorer</h2>
         <img src="<%=require('../images/menu_dark.svg').default%>" alt="Меню" class="header__menu" id="open-menu">
-        <div class="header__list">
+        <div class="header__list" id="header-list">
           <nav class="header__navigation">
-            <a href="./index.html" class="header__page header__page_dark">Главная</a>
-            <a href="./articles.html" class="header__page header__page_dark header__page_active_dark">Сохранённые статьи</a>
+            <a href="./index.html" class="header__page header__page_dark header__page_visible">Главная</a>
+            <a href="./articles.html" class="header__page header__page_dark header__page_active header__page_visible">Сохранённые статьи</a>
           </nav>
-          <button class="button button__sign button__sign_dark">
-            Гретта&ensp;
-            <img src="<%=require('../images/logout_dark.svg').default%>" alt="Выход&rArr;">
+          <button id="button-signout" class="button button__sign button__sign_dark">
+            <span id="sign-text"></span>
+            <span id="text-indent">&ensp;</span>
+            <img id="signout-img" src="<%=require('../images/logout_dark.svg').default%>" alt="Выход&rArr;">
           </button>
         </div>
       </div>
@@ -30,25 +31,30 @@
     <section class="saved">
       <div class="saved__content">
         <p class="saved__section">Сохранённые статьи</p>
-        <h3 class="saved__title">Грета, у вас 5 сохранённых статей</h3>
-        <p class="saved__subtitle">По ключевым словам: <span class="saved__accent">Природа, Тайга</span> и <span class="saved__accent">2 другим</span></p>
+        <h3 id="saved-title" class="saved__title">
+          <span id="user-name"></span>, у вас <span id="saved-items"></span> сохранённых статей
+        </h3>
+        <p id="saved-subtitle" class="saved__subtitle">
+          По ключевым словам: <span class="saved__accent" id="first-key"></span>, <span class="saved__accent" id="second-key"></span> и <span class="saved__accent" id="other-keys"></span>
+        </p>
       </div>
     </section>
 
-    <section class="preloader">
+    <div id="preloader" class="preloader preloader_disable">
       <img src="<%=require('../images/Ellipse.png').default%>" alt="Кружок загрузки..." class="preloader__circle">
-      <p class="preloader__text">Идет загрузка новостей...</p>
-    </section>
+      <p class="preloader__text">Идет поиск новостей...</p>
+    </div>
 
-    <section class="notfound">
+    <div id="articles-not-found" class="notfound notfound_disable">
       <img src="<%=require('../images/not-found_v1.png').default%>" class="notfound__image" alt="Ничего не найдено" />
-      <p class="notfound__title">У вас нет сохранённых статей</p>
-      <p class="notfound__subtitle">Попробуйте найти новость по ключевому слову и добавить её в закладки.</p>
-    </section>
+      <p class="notfound__title"></p>
+      <p class="notfound__subtitle"></p>
+    </div>
 
     <section class="articles">
       <div id="articles-list" class="articles-list">
 
+<!-- 
         <div class="article-card">
           <div class="article-card__image" style="background-image: url(https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80)" data-url="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80">
             <button class="article-card__delete">
@@ -63,71 +69,9 @@
             <p class="article-card__source">Лента.ру</p>
           </div>
         </div>
-
-        <div class="article-card">
-          <div class="article-card__image" style="background-image: url(https://images.unsplash.com/photo-1477554193778-9562c28588c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)" data-url="https://images.unsplash.com/photo-1477554193778-9562c28588c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
-            <button class="article-card__delete">
-              <span class="article-card__tooltip">Убрать из сохранённых</span>
-            </button>
-            <p class="article-card__keyword">Природа</p>
-          </div>
-          <div class="article-card__description">
-            <p class="article-card__date"><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
-            <h3 class="article-card__name">Национальное достояние – парки</h3>
-            <p class="article-card__paragraph">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного 
-              из местных чудес природы.</p>
-            <p class="article-card__source">Лента.ру</p>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-card__image" style="background-image: url(https://images.unsplash.com/photo-1471086569966-db3eebc25a59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)" data-url="https://images.unsplash.com/photo-1471086569966-db3eebc25a59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
-            <button class="article-card__delete">
-              <span class="article-card__tooltip">Убрать из сохранённых</span>
-            </button>
-            <p class="article-card__keyword">Тайга</p>
-          </div>
-          <div class="article-card__description">
-            <p class="article-card__date"><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
-            <h3 class="article-card__name">Национальное достояние – парки</h3>
-            <p class="article-card__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-            <p class="article-card__source">Лента.ру</p>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-card__image" style="background-image: url(https://images.unsplash.com/photo-1477554193778-9562c28588c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)" data-url="https://images.unsplash.com/photo-1477554193778-9562c28588c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80">
-            <button class="article-card__delete">
-              <span class="article-card__tooltip">Убрать из сохранённых</span>
-            </button>
-            <p class="article-card__keyword">Парки</p>
-          </div>
-          <div class="article-card__description">
-            <p class="article-card__date"><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
-            <h3 class="article-card__name">Национальное достояние – парки</h3>
-            <p class="article-card__paragraph">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного 
-              из местных чудес природы.</p>
-            <p class="article-card__source">Лента.ру</p>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-card__image" style="background-image: url(https://images.unsplash.com/photo-1471086569966-db3eebc25a59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80)" data-url="https://images.unsplash.com/photo-1471086569966-db3eebc25a59?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
-            <button class="article-card__delete">
-              <span class="article-card__tooltip">Убрать из сохранённых</span>
-            </button>
-            <p class="article-card__keyword">Фотография</p>
-          </div>
-          <div class="article-card__description">
-            <p class="article-card__date"><time datetime="2019-08-02 19:00">2 августа, 2019</time></p>
-            <h3 class="article-card__name">Национальное достояние – парки</h3>
-            <p class="article-card__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-            <p class="article-card__source">Лента.ру</p>
-          </div>
-        </div>
+      -->
 
       </div>
-      <button class="button button__more">Показать еще</button>
     </section>
 
     <div class="menu" id="menu">
@@ -136,14 +80,15 @@
           <h2 class="menu__logo">NewsExplorer</h2>
           <img class="menu__close" id="close-menu" src="<%=require('../images/close.svg').default%>" alt="Закрыть">
         </div>
-        <div class="menu__list">
+        <div class="menu__list" id="menu-list">
           <nav class="menu__navigation">
             <a href="./index.html" class="menu__page">Главная</a>
-            <a href="./articles.html" class="menu__page menu__page_active">Сохранённые статьи</a>
+            <a id="article-link" href="./articles.html" class="menu__page menu__page_active">Сохранённые статьи</a>
           </nav>
-          <button class="button button__sign button__sign_light button__wide">
-            Гретта&ensp;
-            <img src="<%=require('../images/logout_light.svg').default%>" alt="Выход&rArr;">
+          <button id="menu-signout" class="button button__sign button__sign_light button__wide">
+            <span id="sign-text"></span>
+            <span id="text-indent">&ensp;</span>
+            <img id="signout-img" src="../images/logout_light.svg" alt="Выход&rArr;">
           </button>
         </div>
       </div>
